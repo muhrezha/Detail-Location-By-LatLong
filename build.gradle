@@ -14,6 +14,21 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'org.company'
+                artifactId = 'sample'
+                version = "0.9-SNAPSHOT"
+                from components.java
+
+                pom {
+                    description = 'A description of my library'
+                }
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -35,4 +50,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
 }
