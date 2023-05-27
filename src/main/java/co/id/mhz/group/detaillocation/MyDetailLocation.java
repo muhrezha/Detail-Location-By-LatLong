@@ -7,9 +7,9 @@ import android.location.Geocoder;
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class DetailLocation {
+public class MyDetailLocation {
 
-    public DetailLocation(){}
+    public MyDetailLocation(){}
 
     public String detailLocation(Context context, String lat, String longi){
 //        String lat = "-6.278065";

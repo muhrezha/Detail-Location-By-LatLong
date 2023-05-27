@@ -3,9 +3,9 @@ package co.id.mhz.group.detaillocation;
 import android.content.Context;
 import android.widget.Toast;
 
-public class BottomSheet {
+public class MyBottomSheet {
 
-    public BottomSheet() {
+    public MyBottomSheet() {
     }
 
     public static void s(Context c, String message){
