@@ -1,32 +1,17 @@
-//plugins {
-//    id 'com.android.library'
-//}
-
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+}
 
 android {
     namespace 'co.id.mhz.group.detaillocation'
-//    compileSdk 32
-//
-//    defaultConfig {
-//        minSdk 21
-//        targetSdk 32
-//
-//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//        consumerProguardFiles "consumer-rules.pro"
-//    }
-
-    compileSdkVersion 33
-    buildToolsVersion "30.0.0"
+    compileSdk 32
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
+        minSdk 21
+        targetSdk 32
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -44,12 +29,12 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':detail_location')
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
-    implementation 'com.jakewharton:butterknife:8.8.1'
 }
