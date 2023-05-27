@@ -4,33 +4,30 @@
 
 apply plugin: 'com.android.library'
 
-
 android {
-//    namespace 'co.id.mhz.group.detaillocation'
-    compileSdk 32
+    namespace 'co.id.mhz.group.detaillocation'
+//    compileSdk 32
+//
+//    defaultConfig {
+//        minSdk 21
+//        targetSdk 32
+//
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        consumerProguardFiles "consumer-rules.pro"
+//    }
+
+    compileSdkVersion 33
+    buildToolsVersion "30.0.0"
 
     defaultConfig {
-        minSdk 21
-        targetSdk 32
+        minSdkVersion 15
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
-
-//    publishing {
-//        publications {
-//            maven(MavenPublication) {
-//                groupId = 'org.company'
-//                artifactId = 'sample'
-//                version = "0.9-SNAPSHOT"
-//                from components.java
-//
-//                pom {
-//                    description = 'A description of my library'
-//                }
-//            }
-//        }
-//    }
 
     buildTypes {
         release {

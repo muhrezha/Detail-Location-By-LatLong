@@ -9,6 +9,8 @@ import java.util.List;
 
 public class DetailLocation {
 
+    public DetailLocation(){}
+
     public String detailLocation(Context context, String lat, String longi){
 //        String lat = "-6.278065";
 //        String longi = "106.854912";
